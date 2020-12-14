@@ -212,7 +212,7 @@ function askQuestion3() {
     q1Choices.removeChild(listEl2);
     q1Choices.appendChild(listEl3);
     //put question and answers in "#question" div
-    document.getElementById("question-title").innerHTML = questions.Question1;
+    document.getElementById("question-title").innerHTML = questions.Question3;
     listEl3.appendChild(li9); 
     listEl3.appendChild(li10);
     listEl3.appendChild(li11);
@@ -232,7 +232,7 @@ function askQuestion4() {
     q1Choices.removeChild(listEl3);
     q1Choices.appendChild(listEl4);
     //put question and answers in "#question" div
-    document.getElementById("question-title").innerHTML = questions.Question1;
+    document.getElementById("question-title").innerHTML = questions.Question4;
     listEl4.appendChild(li13); 
     listEl4.appendChild(li14);
     listEl4.appendChild(li15);
@@ -252,7 +252,7 @@ function askQuestion5() {
     q1Choices.removeChild(listEl4);
     q1Choices.appendChild(listEl5);
     //put question and answers in "#question" div
-    document.getElementById("question-title").innerHTML = questions.Question1;
+    document.getElementById("question-title").innerHTML = questions.Question5;
     listEl5.appendChild(li17); 
     listEl5.appendChild(li18);
     listEl5.appendChild(li19);
