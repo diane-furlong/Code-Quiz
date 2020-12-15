@@ -101,6 +101,7 @@ function setTime(){
 function isCorrect1(){
     qWrong = false;
     console.log(qWrong);
+    localStorage.setItem("Question 1", 1);
     askQuestion2();
 }
 
@@ -108,6 +109,7 @@ function isCorrect1(){
 function isIncorrect1(){
     qWrong = true;
     console.log(qWrong);
+    localStorage.setItem("Question 1", 0);
     askQuestion2();
 }
 
@@ -115,6 +117,7 @@ function isIncorrect1(){
 function isCorrect2(){
     qWrong = false;
     console.log(qWrong);
+    localStorage.setItem("Question 2", 1);
     askQuestion3();
 }
 
@@ -122,6 +125,7 @@ function isCorrect2(){
 function isIncorrect2(){
     qWrong = true;
     console.log(qWrong);
+    localStorage.setItem("Question 2", 0);
     askQuestion3();
 }
 
@@ -129,12 +133,14 @@ function isIncorrect2(){
 function isCorrect3(){
     qWrong = false;
     console.log(qWrong);
+    localStorage.setItem("Question 3", 1);
     askQuestion4();
 }
 
 function isIncorrect3(){
     qWrong = true;
     console.log(qWrong);
+    localStorage.setItem("Question 3", 0);
     askQuestion4();
 }
 
@@ -142,12 +148,14 @@ function isIncorrect3(){
 function isCorrect4(){
     qWrong = false;
     console.log(qWrong);
+    localStorage.setItem("Question 4", 1);
     askQuestion5();
 }
 
 function isIncorrect4(){
     qWrong = true;
     console.log(qWrong);
+    localStorage.setItem("Question 4", 0);
     askQuestion5();
 }
 
@@ -155,12 +163,14 @@ function isIncorrect4(){
 function isCorrect5(){
     qWrong = false;
     console.log(qWrong);
+    localStorage.setItem("Question 5", 1);
     endQuiz();
 }
 
 function isIncorrect5(){
     qWrong = true;
     console.log(qWrong);
+    localStorage.setItem("Question 5", 0);
     endQuiz();
 }
 
