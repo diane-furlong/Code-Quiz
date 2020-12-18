@@ -6,6 +6,7 @@ var q1Choices = document.getElementById("choices");
 var qScreen = document.getElementById("questions"); //questions div
 var endScreen = document.getElementById("end-screen"); //end screen div
 
+
 //create ordered list and list elements for the question choices
 var listEl1 = document.createElement("ol");
 var li1 = document.createElement("li");
@@ -41,58 +42,45 @@ var li20 = document.createElement("li");
 var listItems = document.getElementById("choices");
 
 //set the text content of relevent elements
-li1.textContent= "blue";
-li2.textContent= "red";
-li3.textContent= "yellow";
-li4.textContent= "purple";
+li1.textContent= "HTML";
+li2.textContent= "C++";
+li3.textContent= "Python";
+li4.textContent= "Ruby";
 
-li5.textContent= "cat";
-li6.textContent= "dog";
-li7.textContent= "fish";
-li8.textContent= "goat";
+li5.textContent= "git clone 'repository link'";
+li6.textContent= "git pull";
+li7.textContent= "git push";
+li8.textContent= "git fish";
 
-li9.textContent= "K";
-li10.textContent= "Mn";
-li11.textContent= "Li";
-li12.textContent= "He";
+li9.textContent= "static";
+li10.textContent= "relative";
+li11.textContent= "fixed";
+li12.textContent= "absolute";
 
-li13.textContent= "Winter";
-li14.textContent= "Summer";
-li15.textContent= "Spring";
-li16.textContent= "Fall";
+li13.textContent= "z";
+li14.textContent= "y";
+li15.textContent= "q";
+li16.textContent= "x";
 
-li17.textContent= "nintendo";
-li18.textContent= "xbox";
-li19.textContent= "playstation";
-li20.textContent= "pc";
+li17.textContent= "//";
+li18.textContent= "*/";
+li19.textContent= "*this is a comment*";
+li20.textContent= "~~";
 
 
 
 var questions= {
-    "Question1": "Which color?",
-    "Question2": "Which animal?",
-    "Question3": "Which element?",
-    "Question4": "Which season?",
-    "Question5": "Which system?",
+    "Question1": "Which is the most basic coding element of the internet?",
+    "Question2": "How do you clone a new GitHub directory into your local files?",
+    "Question3": "Which default position makes images stack on top of each other?",
+    "Question4": "Which index do you use to layer images?",
+    "Question5": "What is the syntax to add a comment in JavaScript?",
 };
 
-//add timer function for reference when decreasing timer on incorrect answer
-var countDisplay = document.getElementById("time"); //time element on the timer
-var secondsLeft = 35; //sets the start time
+let points = 0;
 
-function setTime(){
-    var timeLeft = setInterval(function(){
-        countDisplay.textContent = secondsLeft;
-        secondsLeft--;
-    
-        if(secondsLeft === -1) {
-            clearInterval(timeLeft);
-            endQuiz();
-        }
-        if(qWrong = true) {
-            secondsLeft-10;
-        }
-    }, 1000)
+function score(){
+    points++;
 }
 
 //correct/incorrect functions & loggers
@@ -101,77 +89,133 @@ function setTime(){
 function isCorrect1(){
     qWrong = false;
     console.log(qWrong);
-    localStorage.setItem("Question 1", 1);
-    askQuestion2();
+    var gotIt = document.createElement("p");
+    var gotItRight = document.createTextNode("Correct!");
+    gotIt.appendChild(gotItRight);
+    document.body.appendChild(gotIt);
+    localStorage.setItem("Question 1", parseInt(1));
+    score();
+    localStorage.setItem("Points", points)
+    setTimeout(askQuestion2, 1000);
 }
 
 //next steps if get answer incorrect
 function isIncorrect1(){
     qWrong = true;
     console.log(qWrong);
-    localStorage.setItem("Question 1", 0);
-    askQuestion2();
+    var noGo = document.createElement("p");
+    var gotItWrong = document.createTextNode("Wrong");
+    noGo.appendChild(gotItWrong);
+    document.body.appendChild(noGo);
+    localStorage.setItem("Question 1", parseInt(0));
+    localStorage.setItem("Points", points)
+    setTimeout(askQuestion2, 1000);
 }
+
 
 //question 2:
 function isCorrect2(){
     qWrong = false;
     console.log(qWrong);
-    localStorage.setItem("Question 2", 1);
-    askQuestion3();
+    var gotIt = document.createElement("p");
+    var gotItRight = document.createTextNode("Correct!");
+    gotIt.appendChild(gotItRight);
+    document.body.appendChild(gotIt);
+    localStorage.setItem("Question 2", parseInt(1));
+    score();
+    localStorage.setItem("Points", points)
+    setTimeout(askQuestion3, 1000);
 }
 
 
 function isIncorrect2(){
     qWrong = true;
     console.log(qWrong);
-    localStorage.setItem("Question 2", 0);
-    askQuestion3();
+    var noGo = document.createElement("p");
+    var gotItWrong = document.createTextNode("Wrong");
+    noGo.appendChild(gotItWrong);
+    document.body.appendChild(noGo);
+    localStorage.setItem("Question 2", parseInt(0));
+    localStorage.setItem("Points", points)
+    setTimeout(askQuestion3, 1000);
 }
 
 //question 3:
 function isCorrect3(){
     qWrong = false;
     console.log(qWrong);
-    localStorage.setItem("Question 3", 1);
-    askQuestion4();
+    var gotIt = document.createElement("p");
+    var gotItRight = document.createTextNode("Correct!");
+    gotIt.appendChild(gotItRight);
+    document.body.appendChild(gotIt);
+    localStorage.setItem("Question 3", parseInt(1));
+    score();
+    localStorage.setItem("Points", points)
+    setTimeout(askQuestion4, 1000);
 }
 
 function isIncorrect3(){
     qWrong = true;
     console.log(qWrong);
-    localStorage.setItem("Question 3", 0);
-    askQuestion4();
+    var noGo = document.createElement("p");
+    var gotItWrong = document.createTextNode("Wrong");
+    noGo.appendChild(gotItWrong);
+    document.body.appendChild(noGo);
+    localStorage.setItem("Question 3", parseInt(0));
+    localStorage.setItem("Points", points)
+    setTimeout(askQuestion4, 1000);
 }
 
 //question 4:
 function isCorrect4(){
     qWrong = false;
     console.log(qWrong);
-    localStorage.setItem("Question 4", 1);
-    askQuestion5();
+    var gotIt = document.createElement("p");
+    var gotItRight = document.createTextNode("Correct!");
+    gotIt.appendChild(gotItRight);
+    document.body.appendChild(gotIt);
+    localStorage.setItem("Question 4", parseInt(1));
+    score();
+    localStorage.setItem("Points", points)
+    setTimeout(askQuestion5, 1000);
 }
 
 function isIncorrect4(){
     qWrong = true;
     console.log(qWrong);
-    localStorage.setItem("Question 4", 0);
-    askQuestion5();
+    var noGo = document.createElement("p");
+    var gotItWrong = document.createTextNode("Wrong");
+    noGo.appendChild(gotItWrong);
+    document.body.appendChild(noGo);
+    localStorage.setItem("Question 4", parseInt(0));
+    localStorage.setItem("Points", points)
+    setTimeout(askQuestion5, 1000);
 }
 
 //question 5:
 function isCorrect5(){
     qWrong = false;
     console.log(qWrong);
-    localStorage.setItem("Question 5", 1);
-    endQuiz();
+    var gotIt = document.createElement("p");
+    var gotItRight = document.createTextNode("Correct!");
+    gotIt.appendChild(gotItRight);
+    document.body.appendChild(gotIt);
+    localStorage.setItem("Question 5", parseInt(1));
+    score();
+    localStorage.setItem("Points", points)
+    setTimeout(endQuiz, 1000);
 }
 
 function isIncorrect5(){
     qWrong = true;
     console.log(qWrong);
-    localStorage.setItem("Question 5", 0);
-    endQuiz();
+    var noGo = document.createElement("p");
+    var gotItWrong = document.createTextNode("Wrong");
+    noGo.appendChild(gotItWrong);
+    document.body.appendChild(noGo);
+    localStorage.setItem("Question 5", parseInt(0));
+    localStorage.setItem("Points", points)
+    setTimeout(endQuiz, 1000);
 }
 
 //calling the questionOne function on click of the start button
@@ -197,6 +241,8 @@ li2.addEventListener("click", isIncorrect1);
 li3.addEventListener("click", isIncorrect1);
 li4.addEventListener("click", isIncorrect1);
 
+
+
 function askQuestion2() {
     questionDiv.style.display="block"; //show question div
     q1Choices.removeChild(listEl1);
@@ -216,6 +262,8 @@ li5.addEventListener("click", isCorrect2);
 li6.addEventListener("click", isIncorrect2);
 li7.addEventListener("click", isIncorrect2);
 li8.addEventListener("click", isIncorrect2);
+
+
 
 function askQuestion3() {
     questionDiv.style.display="block"; //show question div
@@ -276,9 +324,4 @@ li17.addEventListener("click", isCorrect5);
 li18.addEventListener("click", isIncorrect5);
 li19.addEventListener("click", isIncorrect5);
 li20.addEventListener("click", isIncorrect5);
-
-function endQuiz(){
-    qScreen.style.display = "none"; //hide the question screen
-    endScreen.style.display = "block"; //show the end screen
-}
 

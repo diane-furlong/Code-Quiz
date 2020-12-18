@@ -8,9 +8,7 @@ var endScreen = document.getElementById("end-screen"); //end screen div
 //timer variables
 var countDisplay = document.getElementById("time"); //time element on the timer
 var secondsLeft = 35; //sets the start time
-
-//booleans
-//var qWrong = false; //variable for wrong answer
+var qWrong = false;
 
 
 //calling the startQuiz and timer functions on click of the start button
