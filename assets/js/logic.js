@@ -38,8 +38,17 @@ function setTime(){
         // }
 }
 
+var finalScore = document.getElementById("final-score");
+var endScore = localStorage.getItem("Points");
+let points = 0;
+
+function score(){
+    points++;
+}
+
 //create function to end the quiz when the time runs out
 function endQuiz(){
     qScreen.style.display = "none"; //hide the question screen
     endScreen.style.display = "block"; //show the end screen
+    finalScore.textContent = localStorage.getItem("Points");
 }

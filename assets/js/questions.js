@@ -77,12 +77,7 @@ var questions= {
     "Question5": "What is the syntax to add a comment in JavaScript?",
 };
 
-let points = 0;
-
-function score(){
-    points++;
-}
-
+localStorage.setItem("Points", points);
 //correct/incorrect functions & loggers
 //question 1:
 //next steps if get answer correct
@@ -108,7 +103,7 @@ function isIncorrect1(){
     noGo.appendChild(gotItWrong);
     document.body.appendChild(noGo);
     localStorage.setItem("Question 1", parseInt(0));
-    localStorage.setItem("Points", points)
+    localStorage.setItem("Points", points);
     setTimeout(askQuestion2, 1000);
 }
 
@@ -123,7 +118,7 @@ function isCorrect2(){
     document.body.appendChild(gotIt);
     localStorage.setItem("Question 2", parseInt(1));
     score();
-    localStorage.setItem("Points", points)
+    localStorage.setItem("Points", points);
     setTimeout(askQuestion3, 1000);
 }
 
@@ -136,7 +131,7 @@ function isIncorrect2(){
     noGo.appendChild(gotItWrong);
     document.body.appendChild(noGo);
     localStorage.setItem("Question 2", parseInt(0));
-    localStorage.setItem("Points", points)
+    localStorage.setItem("Points", points);
     setTimeout(askQuestion3, 1000);
 }
 
@@ -150,7 +145,7 @@ function isCorrect3(){
     document.body.appendChild(gotIt);
     localStorage.setItem("Question 3", parseInt(1));
     score();
-    localStorage.setItem("Points", points)
+    localStorage.setItem("Points", points);
     setTimeout(askQuestion4, 1000);
 }
 
@@ -162,7 +157,7 @@ function isIncorrect3(){
     noGo.appendChild(gotItWrong);
     document.body.appendChild(noGo);
     localStorage.setItem("Question 3", parseInt(0));
-    localStorage.setItem("Points", points)
+    localStorage.setItem("Points", points);
     setTimeout(askQuestion4, 1000);
 }
 
@@ -176,7 +171,7 @@ function isCorrect4(){
     document.body.appendChild(gotIt);
     localStorage.setItem("Question 4", parseInt(1));
     score();
-    localStorage.setItem("Points", points)
+    localStorage.setItem("Points", points);
     setTimeout(askQuestion5, 1000);
 }
 
@@ -188,7 +183,7 @@ function isIncorrect4(){
     noGo.appendChild(gotItWrong);
     document.body.appendChild(noGo);
     localStorage.setItem("Question 4", parseInt(0));
-    localStorage.setItem("Points", points)
+    localStorage.setItem("Points", points);
     setTimeout(askQuestion5, 1000);
 }
 
@@ -202,7 +197,7 @@ function isCorrect5(){
     document.body.appendChild(gotIt);
     localStorage.setItem("Question 5", parseInt(1));
     score();
-    localStorage.setItem("Points", points)
+    localStorage.setItem("Points", points);
     setTimeout(endQuiz, 1000);
 }
 
@@ -214,7 +209,7 @@ function isIncorrect5(){
     noGo.appendChild(gotItWrong);
     document.body.appendChild(noGo);
     localStorage.setItem("Question 5", parseInt(0));
-    localStorage.setItem("Points", points)
+    localStorage.setItem("Points", points);
     setTimeout(endQuiz, 1000);
 }
 

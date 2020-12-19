@@ -1,12 +1,3 @@
-//keep track of user's answers
-var finalScore = document.getElementById("final-score");
-
-var endScore = localStorage.getItem("Points");
-
-
-finalScore.textContent = localStorage.getItem("Points");
-
-
 //define the variables:
 
 var clearBtn = document.getElementById("clear");
@@ -27,24 +18,27 @@ if(clearBtn){
 clearBtn.addEventListener("click", clearAll);
 }
 
-if(submitBtn){
-    submitBtn.addEventListener("click", submitScore);
-}
 function submitScore(){
     localStorage.setItem("score", endScore);
     localStorage.setItem("initials", initInput.value);
     window.location.href = "./highscores.html";
+}
+if(submitBtn){
+    submitBtn.addEventListener("click", submitScore);
+}
 
     var hiScoreList = document.getElementById("highscores"); //high score OL element
-    var score = document.createElement("li");
-    score.textContent = initInput + " - " + endScore;
-    hiScoreList.appendChild(score);
+    var scoreList = document.createElement("li");   
+    hiScoreList.appendChild(scoreList); 
+    var initialsDisplay = (localStorage.getItem("initials"));
+    var scoreDisplay = localStorage.getItem("score");
+    scoreList.textContent = initialsDisplay + " - " + scoreDisplay;
+ 
 
-    document.getElementById("highscores").innerHTML =
-    localStorage.getItem("score");
-    localStorage.getItem("initials");
 
-}
+
+
+  
 
 
 // //get the score and initials from local storage
